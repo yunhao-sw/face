@@ -11,10 +11,7 @@ RUN apt-get update && \
 # 复制 requirements.txt
 COPY requirements.txt /app/
 
-# 安装依赖项
-RUN pip install modelscope[framework]==1.19.0 
-
-# 安装其他依赖
+# 安装依赖
 RUN pip install -r requirements.txt
 
 # 复制应用代码
